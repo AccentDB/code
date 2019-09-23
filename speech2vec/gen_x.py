@@ -1,13 +1,14 @@
-from testing import *
+from mfcc import *
 import numpy as np
 
-folder = '/media/enigmaeth/My Passport/Datasets/linguistics data/eng_mand_equal'
-x, y = make_class_array(folder)
-print(x.shape, y.shape)
-X_file = 'x_test_mfcc_' + (folder.split('/'))[-1]
-Y_file = 'y_label_'+ (folder.split('/'))[-1]
+folder = '../data/splits'
+
+x = make_class_array(folder)
+print(x.shape)
+X_file = '../data/numpy_vectors/x_test_mfcc_' + (folder.split('/'))[-1]
+
+print("saving  labels to ", X_file)
 np.save(X_file, x)  
-np.save(Y_file, y)
 
 
 

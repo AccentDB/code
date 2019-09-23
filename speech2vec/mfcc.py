@@ -104,7 +104,7 @@ def make_class_array(folder):
     lst = []
     files = os.listdir(folder)
     count_files = len(files)
-    for idx, file_path in tqdm(enumerate(files)):
+    for file_path in tqdm(files):
         filename = os.path.join(folder, file_path)
         lst.append(make_normed_mfcc(filename))
     class_array = np.array(lst)

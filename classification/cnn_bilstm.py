@@ -19,7 +19,6 @@ from keras.layers.core import Dense, Dropout, Activation, Flatten
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from gen_y import generate_y
 
 # parameters
 test_dim = 2999
@@ -29,13 +28,13 @@ nb_filter = 64
 filter_length_1 = 50
 filter_length_2 = 25
 hidden_dims = 250
-nb_epoch = 4
+nb_epoch = 16
 nb_classes = 2
 
 print('Loading data...')
-X = np.load('x_test_mfcc_eng_mand_equal.npy')
+X = np.load('../data/numpy_vectors/x_label_splits.npy')
+y = np.load('../data/numpy_vectors/y_label_splits.npy')
 print(X.shape)
-y = generate_y('/media/enigmaeth/My Passport/Datasets/linguistics data/eng_mand_equal')
 print(y.shape)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15)

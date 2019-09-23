@@ -1,8 +1,7 @@
 
 from __future__ import print_function
 import numpy as np
-from gen_y import generate_y
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from time import time
 #np.random.seed(1337)  # for reproducibility
@@ -23,26 +22,16 @@ nb_filter = 64
 filter_length_1 = 50
 filter_length_2 = 25
 hidden_dims = 250
-nb_epoch = 8
+nb_epoch = 20
 nb_classes = 2
 split_ratio = 0.15
 
 print('Loading data...')
 
-X = np.load('x_test_mfcc_eng_mandarin.npy')
-y = generate_y('/media/enigmaeth/My Passport/Datasets/linguistics data/eng_mandarin')
-#X = np.load('usa373_span162_mfcc_13.npy')
-#X = np.load('x_test_mfcc_split_wav_30sec.npy')
+X = np.load('../data/numpy_vectors/x_label_splits.npy')
+y = np.load('../data/numpy_vectors/y_label_splits.npy')
 print(X.shape)
-#y = np.append(np.ones(3), np.zeros(6))
-#y = generate_y('/media/enigmaeth/My Passport/Datasets/linguistics data/split_wav_30sec')
-# y = np.load('y_label_split_wav_30sec.npy')
-#np.set_printoptions(threshold=np.nan)
-#print(y)
-#print(max(y))
 print(y.shape)
-#print(y)
-#exit(0)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=split_ratio)
 

@@ -1,5 +1,9 @@
 ###Python###
 
+# dataset and proccessed
+*.wav
+*.npy
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

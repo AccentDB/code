@@ -15,9 +15,8 @@ from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.recurrent import LSTM
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from gen_y import generate_y
 
 from attention_utils import get_activations, get_data_recurrent
 nb_classes = 2
@@ -29,13 +28,14 @@ APPLY_ATTENTION_BEFORE_LSTM = True
 
 
 print('Loading data...')
-X = np.load('x_test_mfcc_eng_mandarin.npy')
-y = generate_y('/media/enigmaeth/My Passport/Datasets/linguistics data/eng_mandarin')
+X = np.load('../data/numpy_vectors/x_label_splits.npy')
+y = np.load('../data/numpy_vectors/y_label_splits.npy')
 N = X.shape[0]
 X = X.repeat(2).repeat(2)
 y = y.repeat(2).repeat(2)
 X = X.reshape(4*N, 2999, 13)
 print(X.shape)
+print(y.shape)
 
 #X = X[:200]
 #y = y[:200]
@@ -97,7 +97,7 @@ if __name__ == '__main__':
 	m.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 	print(m.summary())
 
-	m.fit([inputs_1], outputs, epochs=3, batch_size=64, validation_split=0.1)
+	m.fit([inputs_1], outputs, epochs=6, batch_size=64, validation_split=0.1)
 
 	y_pred=m.predict(X_test, batch_size=batch_size)
 	for i in range(len(y_pred)):
