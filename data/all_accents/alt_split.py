@@ -7,7 +7,7 @@ import argparse
 from tqdm import tqdm
 
 # Utility functions
-
+xrange = range
 def windows(signal, window_size, step_size):
     if type(window_size) is not int:
         raise AttributeError("Window size must be an integer.")
@@ -34,7 +34,7 @@ def rising_edges(binary_signal):
 # Process command line arguments
 
 parser = argparse.ArgumentParser(description='Split a WAV file at silence.')
-parser.add_argument('--input_file', type=str, help='The WAV file to split.')
+parser.add_argument('input_file', type=str, help='The WAV file to split.')
 parser.add_argument('--output-dir', '-o', type=str, default='.', help='The output folder. Defaults to the current folder.')
 parser.add_argument('--min-silence-length', '-m', type=float, default=3., help='The minimum length of silence at which a split may occur [seconds]. Defaults to 3 seconds.')
 parser.add_argument('--silence-threshold', '-t', type=float, default=1e-6, help='The energy level (between 0.0 and 1.0) below which the signal is regarded as silent. Defaults to 1e-6 == 0.0001%.')
@@ -54,13 +54,7 @@ output_dir = args.output_dir
 output_filename_prefix = os.path.splitext(os.path.basename(input_filename))[0]
 dry_run = args.dry_run
 
-# print("Splitting f{} where energy is below f{}% for longer than {}s.".format(
-#     input_filename,
-#     silence_threshold * 100.,
-#     window_duration
-# ))
-
-# Read and split the file
+print(f"Splitting {input_filename} where energy is below {silence_threshold * 100}% for longer than {window_duration}s.")
 
 sample_rate, samples = input_data=wavfile.read(filename=input_filename, mmap=True)
 
@@ -86,7 +80,6 @@ window_silence = (e > silence_threshold for e in window_energy)
 cut_times = (r * step_duration for r in rising_edges(window_silence))
 
 # This is the step that takes long, since we force the generators to run.
-print("Finding silences...")
 cut_samples = [int(t * sample_rate) for t in cut_times]
 cut_samples.append(-1)
 
@@ -98,11 +91,8 @@ for i, start, stop in tqdm(cut_ranges):
         i
     )
     if not dry_run:
-        print("Writing file ", output_file_path)
         wavfile.write(
             filename=output_file_path,
             rate=sample_rate,
             data=samples[start:stop]
         )
-    else:
-        print("Not Writing file ", output_file_path)

@@ -1,0 +1,7 @@
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   
+python alt_split.py /home/enigmaeth/accentPhase2/data/all_accents/Bangla_Jay.wav --output-dir out/ --min-silence-length=2 --silence-threshold=0.01   

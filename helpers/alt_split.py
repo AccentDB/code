@@ -7,7 +7,7 @@ import argparse
 from tqdm import tqdm
 
 # Utility functions
-
+xrange = range
 def windows(signal, window_size, step_size):
     if type(window_size) is not int:
         raise AttributeError("Window size must be an integer.")
@@ -54,11 +54,11 @@ output_dir = args.output_dir
 output_filename_prefix = os.path.splitext(os.path.basename(input_filename))[0]
 dry_run = args.dry_run
 
-print "Splitting {} where energy is below {}% for longer than {}s.".format(
-    input_filename,
-    silence_threshold * 100.,
-    window_duration
-)
+# print("Splitting f{} where energy is below f{}% for longer than {}s.".format(
+#     input_filename,
+#     silence_threshold * 100.,
+#     window_duration
+# ))
 
 # Read and split the file
 
@@ -86,7 +86,7 @@ window_silence = (e > silence_threshold for e in window_energy)
 cut_times = (r * step_duration for r in rising_edges(window_silence))
 
 # This is the step that takes long, since we force the generators to run.
-print "Finding silences..."
+print("Finding silences...")
 cut_samples = [int(t * sample_rate) for t in cut_times]
 cut_samples.append(-1)
 
@@ -98,11 +98,9 @@ for i, start, stop in tqdm(cut_ranges):
         i
     )
     if not dry_run:
-        print "Writing file {}".format(output_file_path)
+        print("Writing file ", output_file_path)
         wavfile.write(
             filename=output_file_path,
             rate=sample_rate,
             data=samples[start:stop]
         )
-    else:
-        print "Not writing file {}".format(output_file_path)
