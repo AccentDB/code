@@ -21,8 +21,10 @@ Larger vectors and metadata files can be downloaded from here.
 ## Colab
 
 Run the following colab to experiment with classification model on a smaller AccentDB dataset.
-[conv_classfication_multi_setup.ipynb](https://colab.research.google.com/drive/1J_pTtmY98vtWHWoIs9WhRuWK0b0uBuxU)
+[conv_classfication_multi_setup.ipynb](https://colab.research.google.com/drive/1J_pTtmY98vtWHWoIs9WhRuWK0b0uBuxU)      
 
+A static version of the colab can se accessed [here](./notebooks/AccentDB_Classification_Colab.ipynb).
+ 
 ---------
 
 ## Code
