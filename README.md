@@ -2,13 +2,13 @@
 [A Database of Non-Native English Accents to Assist Neural Speech Recognition](https://accentdb.github.io/)
 
 ## Dataset
-The current release **v1.0** of AccentDB has three datasets licensed under a [CC BY-NC 4.0 License](./LICENSE). 
+The current release **v1.0** of AccentDB has three datasets licensed under a [CC BY-NC 4.0 License](./LICENSE). The datasets can be downloaded from [here](https://accentdb.github.io/#dataset).
 
-| <center> </center> | Title | Description | Notes |
-| :---: |:--------- | :---------- | --------: |
-| <a class="button-download" href=""> **2.8GB** </a> |**accentdb_core**| 4 non-native Indian English accents collected by authors.   | 6,587 files   |
-| <a class="button-download" href=""> **3.9GB** </a> |**accentdb_extended**| Samples for 5 English Accents + 4 accents from accentdb_core. |   19,111 files|
-| <a class="button-download" href=""> **1.3GB** </a> |**accentdb_raw**| Raw and unprocessed recordings for the core dataset. | 11 files |
+| Title | Description | Notes |
+|:--------- | :---------- | --------: |
+|**accentdb_core**| 4 non-native Indian English accents collected by authors.   | 6,587 files   |
+|**accentdb_extended**| Samples for 5 English Accents + 4 accents from accentdb_core. |   19,111 files|
+|**accentdb_raw**| Raw and unprocessed recordings for the core dataset. | 11 files |
 
 ## Embedding Visualization
 The one-speaker-per-accent 600 sample vectors and metadata can be found at [AccentDB/embedding-150](https://github.com/AccentDB/embedding-150); and the projection at [Embedding Projector](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/AccentDB/embedding-150/master/template_projector_config.json).
@@ -21,7 +21,7 @@ Larger vectors and metadata files can be downloaded from here.
 # Colab
 
 Run the following colab to experiment with classification model on a smaller AccentDB dataset.
-[conv_classfication_multi_setup.ipynb]()
+[conv_classfication_multi_setup.ipynb](https://colab.research.google.com/drive/1J_pTtmY98vtWHWoIs9WhRuWK0b0uBuxU)
 
 ---------
 
