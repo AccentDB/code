@@ -18,14 +18,14 @@ Larger vectors and metadata files can be downloaded from here.
 - [accents-4-samples-700](https://drive.google.com/drive/folders/1d7pyl2AwmnEgVvGTeNjOYgKRa_awUnjN?usp=sharing):  2,800 rows.
 - [accents-9-samples-250](https://drive.google.com/drive/folders/16vkVq36zTFGB2p0-QL7PZQRLGQkk9yQ7?usp=sharing): 22,500 rows.
 
-# Colab
+## Colab
 
 Run the following colab to experiment with classification model on a smaller AccentDB dataset.
 [conv_classfication_multi_setup.ipynb](https://colab.research.google.com/drive/1J_pTtmY98vtWHWoIs9WhRuWK0b0uBuxU)
 
 ---------
 
-# Code
+## Code
 The steps below are required if you want to work with the raw recordings. We share the scripts that we used to clean and preprocess the recordings. We also share code to train and test the different models.
 
 `repo.tree` contains the structure of the repo including `.npy` and `.wav` files. These files are not tracked by git. 
