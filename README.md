@@ -1,4 +1,32 @@
-# accentNet
+# AccentDB
+[A Database of Non-Native English Accents to Assist Neural Speech Recognition](https://accentdb.github.io/)
+
+## Dataset
+The current release **v1.0** of AccentDB has three datasets licensed under a [CC BY-NC 4.0 License](./LICENSE). 
+
+| <center> </center> | Title | Description | Notes |
+| :---: |:--------- | :---------- | --------: |
+| <a class="button-download" href=""> **2.8GB** </a> |**accentdb_core**| 4 non-native Indian English accents collected by authors.   | 6,587 files   |
+| <a class="button-download" href=""> **3.9GB** </a> |**accentdb_extended**| Samples for 5 English Accents + 4 accents from accentdb_core. |   19,111 files|
+| <a class="button-download" href=""> **1.3GB** </a> |**accentdb_raw**| Raw and unprocessed recordings for the core dataset. | 11 files |
+
+## Embedding Visualization
+The one-speaker-per-accent 600 sample vectors and metadata can be found at [AccentDB/embedding-150](https://github.com/AccentDB/embedding-150); and the projection at [Embedding Projector](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/AccentDB/embedding-150/master/template_projector_config.json).
+
+Larger vectors and metadata files can be downloaded from here.
+- [accents-4-samples-250]():  1,000 rows.    
+- [accents-4-samples-700]():  2,800 rows.
+- [accents-9-samples-250](): 22,500 rows.
+
+# Colab
+
+Run the following colab to experiment with classification model on a smaller AccentDB dataset.
+[conv_classfication_multi_setup.ipynb]()
+
+---------
+
+# Code
+The steps below are required if you want to work with the raw recordings. We share the scripts that we used to clean and preprocess the recordings. We also share code to train and test the different models.
 
 `repo.tree` contains the structure of the repo including `.npy` and `.wav` files. These files are not tracked by git. 
 
@@ -78,9 +106,9 @@ Run script similar to `/data/all_accents/all_accents_trim.sh` to trim all files 
 --------
 ### Step 5: Classification using initial run with MFCC
 
-Run the following colabs for 2 experimental setups.
-1. [conv1d on all_accents](https://colab.research.google.com/drive/1Z5vg1eRU3zCskrlTc2kp1y9xzUx8P9H8?authuser=2#scrollTo=Zz0tpQ_kiQNo)
-2. [train_on_one_person_and_test_on_other](https://colab.research.google.com/drive/1dMZxbFCPBc2gJkNM47F_j7lDtvVaDhxb?authuser=2#scrollTo=koL6wrhIq_em)
+<strikethrough>Run the following colabs for 2 experimental setups.
+1. [conv1d on all_accents](https://colab.research.google.com/drive/1Z5vg1eRU3zCskrlTc2kp1y9xzUx8P9H8?authuser=2#scrollTo=Zz0tpQ_kiQNo) (Requires access request)
+2. [train_on_one_person_and_test_on_other](https://colab.research.google.com/drive/1dMZxbFCPBc2gJkNM47F_j7lDtvVaDhxb?authuser=2#scrollTo=koL6wrhIq_em) (Requires access request) </strikethrough>
 
 The results can be found inside `data/numpy_vectors/terminal.log`.
 
