@@ -2,7 +2,7 @@
 [A Database of Non-Native English Accents to Assist Neural Speech Recognition](https://accentdb.github.io/)
 
 ## Dataset
-The current release **v1.0** of AccentDB has three datasets licensed under a [CC BY-NC 4.0 License](./LICENSE). The datasets can be downloaded from [here](https://accentdb.github.io/#dataset).
+The current release **v1.0** of AccentDB has three datasets that can be downloaded from [here](https://accentdb.github.io/#dataset).
 
 | Title | Description | Notes |
 |:--------- | :---------- | --------: |
@@ -122,3 +122,21 @@ The results can be found inside `data/numpy_vectors/terminal.log`.
     │    &nbsp;&nbsp;&nbsp;&nbsp;├── `conv_1d_model_run.py`    
     
 ---------
+## Citation
+If you have found our dataset or models to be useful, please cite us as below.  
+```
+@InProceedings{ahamad-anand-bhargava:2020:LREC,
+  author    = {Ahamad, Afroz  and  Anand, Ankit  and  Bhargava, Pranesh},
+  title     = {AccentDB: A Database of Non-Native English Accents to Assist Neural Speech Recognition},
+  booktitle      = {Proceedings of The 12th Language Resources and Evaluation Conference},
+  month          = {May},
+  year           = {2020},
+  address        = {Marseille, France},
+  publisher      = {European Language Resources Association},
+  pages     = {5353--5360},
+  url       = {https://www.aclweb.org/anthology/2020.lrec-1.659}
+}
+```
+-----
+## LICENSE
+AccentDB is licensed under a [CC BY-NC 4.0 License](./LICENSE).
