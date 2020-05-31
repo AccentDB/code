@@ -14,9 +14,9 @@ The current release **v1.0** of AccentDB has three datasets licensed under a [CC
 The one-speaker-per-accent 600 sample vectors and metadata can be found at [AccentDB/embedding-150](https://github.com/AccentDB/embedding-150); and the projection at [Embedding Projector](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/AccentDB/embedding-150/master/template_projector_config.json).
 
 Larger vectors and metadata files can be downloaded from here.
-- [accents-4-samples-250]():  1,000 rows.    
-- [accents-4-samples-700]():  2,800 rows.
-- [accents-9-samples-250](): 22,500 rows.
+- [accents-4-samples-250](https://drive.google.com/drive/folders/1ECGDOxcFAMp9y-yCBTy4d1M2Bb8fkp3r?usp=sharing):  1,000 rows.    
+- [accents-4-samples-700](https://drive.google.com/drive/folders/1d7pyl2AwmnEgVvGTeNjOYgKRa_awUnjN?usp=sharing):  2,800 rows.
+- [accents-9-samples-250](https://drive.google.com/drive/folders/16vkVq36zTFGB2p0-QL7PZQRLGQkk9yQ7?usp=sharing): 22,500 rows.
 
 # Colab
 
