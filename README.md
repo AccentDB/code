@@ -30,7 +30,9 @@ A static version of the colab can se accessed [here](./notebooks/AccentDB_Classi
 ## Code
 The steps below are required if you want to work with the raw recordings. We share the scripts that we used to clean and preprocess the recordings. We also share code to train and test the different models.
 
-`repo.tree` contains the structure of the repo including `.npy` and `.wav` files. These files are not tracked by git. 
+`repo.tree` contains the structure of the repo including `.npy` and `.wav` files. These files are not tracked by git.
+
+> We are thankful to https://github.com/dwww2012/Accent-Classifier for providing with code for preprocessing and generating MFCC vectors. 
 
 ### Preprocessing .wav recordings
 
@@ -122,7 +124,7 @@ The results can be found inside `data/numpy_vectors/terminal.log`.
     │    &nbsp;&nbsp;&nbsp;&nbsp;├── `conv_1d_model_aws.py`    
     │    &nbsp;&nbsp;&nbsp;&nbsp;├── `conv_1d_model.py`    
     │    &nbsp;&nbsp;&nbsp;&nbsp;├── `conv_1d_model_run.py`    
-    
+   
 ---------
 ## Citation
 If you have found our dataset or models to be useful, please cite us as below.  
